@@ -15,22 +15,22 @@ public class MenuController {
     @Autowired
     MenuRepo menuRepo;
 
-    @GetMapping("/mealList")
-    public String mealList(Map<String,Object>model){
-        model.put("dishes", menuRepo.findAll());
-        return "mealList";
-    }
-
-    @PostMapping("/mealList")
-    public String add(
-            @RequestParam String name,
-            @RequestParam Double price,
-            Map<String,Object> model){
-        Menu menu = new Menu(price,name);
-        menuRepo.save(menu);
-        model.put("dishes", menuRepo.findAll());
-        return "mealList";
-    }
+//    @GetMapping("/mealList")
+//    public String mealList(Map<String,Object>model){
+//        model.put("dishes", menuRepo.findAll());
+//        return "mealList";
+//    }
+//
+//    @PostMapping("/mealList")
+//    public String add(
+//            @RequestParam String name,
+//            @RequestParam Double price,
+//            Map<String,Object> model){
+//        Menu menu = new Menu(price,name);
+//        menuRepo.save(menu);
+//        model.put("dishes", menuRepo.findAll());
+//        return "mealList";
+//    }
 
 
 

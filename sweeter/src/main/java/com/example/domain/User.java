@@ -15,14 +15,19 @@ public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
     @NotBlank(message = "Username can not be empty")
     private String username;
+
     @NotBlank(message = "Password can not be empty")
     private String password;
+
     private boolean active;
+
     @Email(message = "email is not correct")
     @NotBlank(message = "email can not be empty")
     private String email;
+
     private String activationCode;
 
     @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)

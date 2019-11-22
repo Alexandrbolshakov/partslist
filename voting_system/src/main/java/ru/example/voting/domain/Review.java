@@ -13,8 +13,10 @@ public class Review {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     private User user;
-//
-//    private Restaurant restaurant;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "restaurant_id")
+    private Restaurant restaurant;
 
     private Integer scope;
 
@@ -36,22 +38,23 @@ public class Review {
         this.user = user;
     }
 
-    public Review(User user, Integer scope, LocalDateTime dateTime) {
+    public Review(User user, Integer scope, Restaurant restaurant, LocalDateTime dateTime) {
         this.user = user;
         this.scope = scope;
+        this.restaurant=restaurant;
         this.dateTime = dateTime;
     }
 
     public Review() {
     }
-    //
-//    public Restaurant getRestaurant() {
-//        return restaurant;
-//    }
-//
-//    public void setRestaurant(Restaurant restaurant) {
-//        this.restaurant = restaurant;
-//    }
+
+    public Restaurant getRestaurant() {
+        return restaurant;
+    }
+
+    public void setRestaurant(Restaurant restaurant) {
+        this.restaurant = restaurant;
+    }
 
     public Integer getScope() {
         return scope;

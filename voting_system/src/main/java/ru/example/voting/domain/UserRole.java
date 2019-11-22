@@ -1,12 +1,10 @@
 package ru.example.voting.domain;
 
-import org.springframework.security.core.GrantedAuthority;
-
-public enum UserRole implements GrantedAuthority {
+public enum UserRole  {
     USER, ADMIN;
 
-    @Override
-    public String getAuthority() {
-        return name();
-    }
+//    @Override
+//    public String getAuthority() {
+//        return name();
+//    }
 }

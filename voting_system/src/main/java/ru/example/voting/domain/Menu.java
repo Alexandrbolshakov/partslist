@@ -1,9 +1,6 @@
 package ru.example.voting.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
@@ -18,11 +15,14 @@ public class Menu {
 
     private LocalDate date;
 
-//    private Restaurant restaurant;
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Restaurant restaurant;
 
-    public Menu(Double price, String name) {
+    public Menu(Double price, String name, LocalDate localDate, Restaurant restaurant) {
         this.price = price;
         this.name = name;
+        this.date = localDate;
+        this.restaurant = restaurant;
     }
 
     public Menu() {
@@ -60,11 +60,11 @@ public class Menu {
         this.date = date;
     }
 
-//    public Restaurant getRestaurant() {
-//        return restaurant;
-//    }
-//
-//    public void setRestaurant(Restaurant restaurant) {
-//        this.restaurant = restaurant;
-//    }
+    public Restaurant getRestaurant() {
+        return restaurant;
+    }
+
+    public void setRestaurant(Restaurant restaurant) {
+        this.restaurant = restaurant;
+    }
 }

@@ -3,13 +3,11 @@ package com.example.controller;
 import com.example.domain.Message;
 import com.example.domain.User;
 import com.example.repository.MessageRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,10 +18,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Map;
 import java.util.UUID;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
-
-import static java.util.stream.Collectors.*;
 
 @Controller
 public class MainController {

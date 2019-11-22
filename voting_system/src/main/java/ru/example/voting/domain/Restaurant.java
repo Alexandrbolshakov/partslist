@@ -1,11 +1,10 @@
 package ru.example.voting.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
+@Table(name = "rest")
 public class Restaurant {
 
     @Id
@@ -16,12 +15,23 @@ public class Restaurant {
 
     private String name;
 
+    @OneToMany
+    private List<Menu> dishes;
+
     public Restaurant(Double rating, String name) {
         this.rating = rating;
         this.name = name;
     }
 
     public Restaurant() {
+    }
+
+    public List<Menu> getDishes() {
+        return dishes;
+    }
+
+    public void setDishes(List<Menu> dishes) {
+        this.dishes = dishes;
     }
 
     public Long getId() {

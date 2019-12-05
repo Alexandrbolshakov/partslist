@@ -14,7 +14,6 @@
     <#if restaurants??>
     <#list restaurants as r>
     <tr>
-        <td>${r.id}</td>
         <td>${r.name}</td>
         <td>${r.rating}</td>
         <td>
@@ -27,7 +26,12 @@
     </#if>
     </tbody>
 </table>
-<a href="/user">user list</a>
+<form method="get">
+    <input type="hidden" name="_csrf"value="${_csrf.token}"/>
+    <button type="submit">Обновить рейтинг</button>
+</form>
+<br>
+<a href="/userList">user list</a>
 <div></div>
 <a href="/votingList">список голосов</a>
 <div></div>

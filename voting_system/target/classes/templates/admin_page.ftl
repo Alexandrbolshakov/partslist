@@ -20,6 +20,7 @@
     <input type="text" name="filter"/>
     <input type="hidden" name="_csrf"value="${_csrf.token}"/>
     <button type="submit">Посмотреть</button>
+
 </form>
 <table>
     <tr>

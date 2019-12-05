@@ -3,6 +3,15 @@
 
 <div>Меню</div>
 
+<form method="get" action="/mealList">
+
+    <#if filter??>
+        <label>
+            <input type="text" name="filter" value="${filter}">
+        </label>
+    </#if>
+    <button type="submit">Найти</button>
+</form>
 <table>
     <thead>
     <tr>
@@ -19,10 +28,6 @@
             <td>${dish.price}</td>
             <td>${dish.date}</td>
             <td>${dish.restaurant.name}</td>
-            <td>
-                <a href="/add_meal/${dish.id}">edit</a>
-                <a href="/deleteDish/${dish.id}">delete</a>
-            </td>
         </tr>
     </#list>
     </tbody>

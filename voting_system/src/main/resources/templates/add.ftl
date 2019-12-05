@@ -7,6 +7,7 @@
 <form method = "post">
 <input type="text" name="name" placeholder="Название">
 <input type="text" name="rating" placeholder="Рейтинг">
+    <input type="hidden" name="_csrf"value="${_csrf.token}"/>
 <button type="submit">Добавить</button>
 </form>
 <div>

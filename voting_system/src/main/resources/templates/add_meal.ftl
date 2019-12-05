@@ -10,12 +10,13 @@
     <tr>
         <th>название блюда</th>
         <th>цена</th>
+        <th>Дата</th>
+        <th>Ресторан</th>
     </tr>
     </thead>
     <tbody>
     <#list dishes as dish>
         <tr>
-            <td>${dish.id}</td>
             <td>${dish.name}</td>
             <td>${dish.price}</td>
             <td>${dish.date}</td>
@@ -31,6 +32,7 @@
 <form method = "post">
     <input type="text" name="name" placeholder="Название">
     <input type="text" name="price" placeholder="Цена">
+    <input type="hidden" name="_csrf"value="${_csrf.token}"/>
     <button type="submit">Добавить</button>
 </form>
 <div>

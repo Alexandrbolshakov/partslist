@@ -5,18 +5,17 @@
 </head>
 <body>
 Add new user
-${message?ifExists}
+${message!}
 <form action="/registration" method="post">
     <div><label> User Name : <input type="text" name="username"/> </label></div>
     <div><label> Password: <input type="password" name="password"/> </label></div>
-    <div><label> Role: <input type="role" name="role"/> </label></div>
 
 <#--    <#list roles as role>-->
 <#--        <div>-->
 <#--            <label><input type="checkbox" name="${role}">${role}</label>-->
 <#--        </div>-->
 <#--    </#list>-->
-<#-- -->
+<#--&lt;#&ndash; &ndash;&gt;-->
     <input type="hidden" name="_csrf"value="${_csrf.token}"/>
     <div><input type="submit" value="Sign In"/></div>
 </form>

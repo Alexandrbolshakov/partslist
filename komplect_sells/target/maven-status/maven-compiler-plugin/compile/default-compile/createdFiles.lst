@@ -1,0 +1,15 @@
+com\example\sells\service\PartService.class
+com\example\sells\controller\RegistrationController.class
+com\example\sells\controller\SupplierController.class
+com\example\sells\repos\SupplierRepo.class
+com\example\sells\config\WebSecurityConfig.class
+com\example\sells\config\MvcConfig.class
+com\example\sells\service\UserService.class
+com\example\sells\domain\Role.class
+com\example\sells\domain\User.class
+com\example\sells\repos\UserRepo.class
+com\example\sells\Application.class
+com\example\sells\controller\MainController.class
+com\example\sells\repos\PartRepo.class
+com\example\sells\domain\Part.class
+com\example\sells\domain\Supplier.class

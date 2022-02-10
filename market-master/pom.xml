@@ -32,7 +32,7 @@
         <spring.version>4.0.0.RELEASE</spring.version>
         <security.version>3.2.0.RELEASE</security.version>
         <spring.data.version>1.4.3.RELEASE</spring.data.version>
-        <hibernate.version>4.2.0.Final</hibernate.version>
+        <hibernate.version>5.4.24.Final</hibernate.version>
         <jstl.version>1.2</jstl.version>
         <tiles.version>3.0.0</tiles.version>
     </properties>
